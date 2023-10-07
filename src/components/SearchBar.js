@@ -11,15 +11,20 @@ const SearchBar = () => {
   };
 
   const handleSearch = () => {
+    // Verifica si el término de búsqueda está vacío
+    if (searchTerm.trim() === '') {
+      return; // No realiza la búsqueda si está vacío
+    }
+
     fetch(`https://rickandmortyapi.com/api/character/?name=${searchTerm}`)
       .then(response => response.json())
       .then(data => {
-        setSearchResults(data.results || []); //  searchResults is an array, even if empty
-        setShowNoResults(!data.results || data.results.length === 0); // Show no results message if the result array is empty
+        setSearchResults(data.results || []);
+        setShowNoResults(!data.results || data.results.length === 0);
       })
       .catch(error => {
         console.error('Error searching characters:', error);
-        setShowNoResults(true); // Show no results message in case of an error
+        setShowNoResults(true);
       });
   };
 
