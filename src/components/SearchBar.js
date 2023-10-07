@@ -28,6 +28,7 @@ const SearchBar = () => {
       <div className="mb-3">
         <h5 className='text-white'>Search name</h5>
         <input
+          required
           type="text"
           className="form-control bg-dark text-white"
           placeholder="Search by"
