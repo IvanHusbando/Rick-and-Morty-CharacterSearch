@@ -1,2 +1,2 @@
-# Y0u can see this proyect here: https://ivan-rickandmorty.netlify.app/
+# You can see this project here: https://ivan-rickandmorty.netlify.app/
 
